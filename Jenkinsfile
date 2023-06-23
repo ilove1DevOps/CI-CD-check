@@ -16,6 +16,10 @@ pipeline {
 	        echo 'Login Completed' 
                 }
             }
-    }
-}
+    	}
+	stage  ('push Completed'){
+		steps{
+			sh 'docker push piyushdhir121/your-image '
+			echo 'pushed to docker hub check the docker hub'
+        }
 }
