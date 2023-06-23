@@ -17,7 +17,9 @@
 16. go to the Binding section and select ```secret text```
 17. name the variable (```DockerHub_cred```), selet the credentials that created.
 18. Click on generate pipeline script and add the output to the jenkins file.
-19. ```pipeline {
+19. ```
+    pipeline
+    {
     agent any    
     stages {
         stage('Build') {
@@ -41,5 +43,11 @@
             }
         }
     }
-}```
-20. Now build it.
+}
+
+```
+
+
+
+
+
