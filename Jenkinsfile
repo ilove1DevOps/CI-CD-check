@@ -13,7 +13,7 @@ pipeline {
     
 
                 //sh 'docker login -u piyushdhir121'
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | sudo docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'                		
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'                		
 	            echo 'Login Completed' 
                 }
             }
