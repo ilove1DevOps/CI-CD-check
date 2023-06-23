@@ -17,7 +17,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 sh 'docker push piyushdhir121/your-image:e1'
-                echo 'Pushed to Docker Hub. Check Docker Hub for the image.'
+                
             }
         }
     }
