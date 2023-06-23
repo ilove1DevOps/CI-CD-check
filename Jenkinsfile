@@ -12,8 +12,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'Docker_Hub_piyushdhir121', variable: 'DockerHub_cred')]) {
     
 
-                //sh 'docker login -u piyushdhir121'
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'                		
+                sh 'docker login -u piyushdhir121'                		
 	            echo 'Login Completed' 
                 }
             }
