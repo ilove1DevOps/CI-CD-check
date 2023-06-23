@@ -12,8 +12,8 @@ pipeline {
                 withCredentials([string(credentialsId: 'Docker_Hub_piyushdhir121', variable: 'DockerHub_cred')]) {
     
 
-                sh 'docker login -u piyushdhir121'                		
-	            echo 'Login Completed' 
+                sh 'docker login -u piyushdhir121 -p $(DockerHub_cred)'                		
+	        echo 'Login Completed' 
                 }
             }
     }
