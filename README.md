@@ -47,6 +47,8 @@
 20. Webhook issue install ```ngrok``` this will take the port of your local host and make it live access over the internet.
 21. login to ngrok , install the package for MAC os and then ```./ngrok```, then use ```sudo mv ngrok /usr/local/bin/``` to make ngrok work.
 22. verify it using ```ngrok --version```.
+23. add the token ```ngrok config add-authtoken jbvaibibalkdkklkdk```
+24. start it with ```ngrok http 8080```
 
 
 
