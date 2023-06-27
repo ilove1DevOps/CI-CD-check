@@ -17,8 +17,7 @@
 16. go to the Binding section and select ```secret text```
 17. name the variable (```DockerHub_cred```), selet the credentials that created.
 18. Click on generate pipeline script and add the output to the jenkins file.
-19. ```
-    pipeline
+19. ```pipeline
     {
     agent any    
     stages {
@@ -43,10 +42,11 @@
             }
         }
     }
-}
+}```
 
-```
-
+20. Webhook issue install ```ngrok``` this will take the port of your local host and make it live access over the internet.
+21. login to ngrok , install the package for MAC os and then ```./ngrok```, then use ```sudo mv ngrok /usr/local/bin/``` to make ngrok work.
+22. verify it using ```ngrok --version```.
 
 
 
