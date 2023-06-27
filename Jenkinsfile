@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t your-image:e1 .'
+                sh 'docker build -t your-image:${GIT_COMMIT} .'
             }
         }
         stage('Login to Docker Hub') {
@@ -16,9 +16,9 @@ pipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                sh 'docker tag your-image:e1 piyushdhir121/your-image:e1'
-                sh 'ddocker push piyushdhir121/your-image:e1'
-                echo 'Pushed to Docker Hub. Check Docker Hub for the image.'
+                sh "docker tag your-image:${GIT_COMMIT} piyushdhir121/your-image:${GIT_COMMIT}"
+                sh "docker push piyushdhir121/your-image:${GIT_COMMIT}"
+                echo "Pushed to Docker Hub. Check Docker Hub for the image with tag ${GIT_COMMIT}."
             }
         }
     }
