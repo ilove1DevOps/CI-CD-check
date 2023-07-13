@@ -23,3 +23,8 @@ pipeline {
         }
     }
 }
+stage('Login to Docker Hub') {
+            steps {
+                    withCredentials([kubeconfigContent(credentialsId: 'kubernetess', variable: 'KUBECONFIG_CONTENT')]) {
+                    sh "kubectl get po"
+}
